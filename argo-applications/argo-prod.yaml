@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/hjungnitsch/k8s-deploy-repo
     targetRevision: HEAD
-    path: deployments/prod/argo
+    path: deployments/prod/argo-workflows
   destination:
     server: https://kubernetes.default.svc
     namespace: argo

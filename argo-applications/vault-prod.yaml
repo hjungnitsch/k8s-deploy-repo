@@ -22,7 +22,7 @@ spec:
             hosts:
               - host: vault.localtest.me
                 paths: ['/']
-  chart: vault
+    chart: vault
   destination:
     server: https://kubernetes.default.svc
     namespace: vault

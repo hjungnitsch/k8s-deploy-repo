@@ -15,8 +15,8 @@ spec:
     name: minio-creds-secret
 
   zones:
-    - servers: 1
-      volumesPerServer: 4
+    - servers: 2
+      volumesPerServer: 2
       volumeClaimTemplate:
         metadata:
           name: data
@@ -34,9 +34,3 @@ spec:
 
 
   podManagementPolicy: Parallel
-
-  console:
-    image: minio/console:v0.3.26
-    replicas: 1
-    consoleSecret:
-      name: console-secret

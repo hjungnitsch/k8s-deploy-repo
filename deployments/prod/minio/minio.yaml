@@ -1,4 +1,4 @@
-apiVersion: minio.min.io/v2
+apiVersion: minio.min.io/v1
 kind: Tenant
 metadata:
   name: minio
@@ -14,10 +14,9 @@ spec:
   credsSecret:
     name: minio-creds-secret
 
-  pools:
+  zones:
     - servers: 1
       volumesPerServer: 1
-
       volumeClaimTemplate:
         metadata:
           name: data
@@ -28,26 +27,16 @@ spec:
             requests:
               storage: 2Gi
 
+
   mountPath: /export
+
   requestAutoCert: false
 
-  s3:
-    bucketDNS: false
 
   podManagementPolicy: Parallel
 
-  serviceMetadata:
-    minioServiceLabels:
-      label: minio-svc
-    minioServiceAnnotations:
-      v2.min.io: minio-svc
-    consoleServiceLabels:
-      label: console-svc
-    consoleServiceAnnotations:
-      v2.min.io: console-svc
-
   console:
-    image: minio/console:v0.5.2
-    replicas: 2
+    image: minio/console:v0.3.26
+    replicas: 1
     consoleSecret:
       name: console-secret

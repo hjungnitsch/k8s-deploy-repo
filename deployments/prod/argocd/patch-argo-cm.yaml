@@ -11,3 +11,6 @@ data:
     - type: helm
       url: https://helm.releases.hashicorp.com
       name: hashicorp
+    - type: helm
+      url: https://dl.gitea.io/charts/
+      name: gitea

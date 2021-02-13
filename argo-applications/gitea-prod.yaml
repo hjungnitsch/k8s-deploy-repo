@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     repoURL: 'https://dl.gitea.io/charts/'
-    targetRevision: 2.1.9
+    targetRevision: 2.1.11
     helm:
       valueFiles:
         - values.yaml
@@ -18,7 +18,7 @@ spec:
           enabled: true
           hosts:
             - gitea.localtest.me
-    chart: gitea-charts/gitea
+    chart: gitea
   destination:
     server: https://kubernetes.default.svc
     namespace: vault

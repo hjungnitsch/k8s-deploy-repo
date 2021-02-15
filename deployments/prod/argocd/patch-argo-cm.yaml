@@ -14,3 +14,6 @@ data:
     - type: helm
       url: https://dl.gitea.io/charts/
       name: gitea
+    - type: helm
+      url: https://external-secrets.github.io/kubernetes-external-secrets/
+      name: external-secrets

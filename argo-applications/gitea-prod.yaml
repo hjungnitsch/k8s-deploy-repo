@@ -21,7 +21,7 @@ spec:
     chart: gitea
   destination:
     server: https://kubernetes.default.svc
-    namespace: vault
+    namespace: gitea
   syncPolicy:
     automated:
       prune: true

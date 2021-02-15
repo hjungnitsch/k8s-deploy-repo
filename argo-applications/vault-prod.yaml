@@ -24,7 +24,7 @@ spec:
                 paths: ['/']
           dev:
             enabled: true
-          postStart: []
+          postStart:
           - /bin/sh
           - -c
           - |

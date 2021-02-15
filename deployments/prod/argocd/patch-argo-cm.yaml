@@ -8,6 +8,7 @@ metadata:
 data:
   repositories: |
     - url: https://github.com/hjungnitsch/k8s-deploy-repo
+    - url: https://github.com/temporalio/helm-charts
     - type: helm
       url: https://helm.releases.hashicorp.com
       name: hashicorp

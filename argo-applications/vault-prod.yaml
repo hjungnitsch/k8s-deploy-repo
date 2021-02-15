@@ -39,7 +39,7 @@ spec:
               capabilities = ["list","read"]
             }
             ' | vault policy write read-secrets -
-            vault write auth/kubernetes/role/demo \
+            vault write auth/kubernetes/role/k8s-auth-role \
               bound_service_account_names=vault-auth \
               bound_service_account_namespaces=default \
               policies=read-secrets \

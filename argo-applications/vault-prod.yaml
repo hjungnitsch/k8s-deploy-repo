@@ -35,7 +35,7 @@ spec:
               kubernetes_host=https://kubernetes.default \
               kubernetes_ca_cert=@/var/run/secrets/kubernetes.io/serviceaccount/ca.crt
             echo '
-            path "kv/*" {
+            path "secret/*" {
               capabilities = ["list","read"]
             }
             ' | vault policy write read-secrets -

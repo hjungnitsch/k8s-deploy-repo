@@ -41,7 +41,7 @@ spec:
             ' | vault policy write read-secrets -
             vault write auth/kubernetes/role/external-secrets \
               bound_service_account_names=external-secrets \
-              bound_service_account_namespaces=vault-prod \
+              bound_service_account_namespaces=vault \
               policies=read-secrets \
               ttl=1h
     chart: vault

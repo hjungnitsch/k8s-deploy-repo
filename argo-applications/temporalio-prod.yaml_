@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/temporalio/helm-charts.git
-    targetRevision: v1.6.2
+    targetRevision: v1.7.0
     path: "."
     helm:
       valueFiles:
@@ -28,6 +28,11 @@ spec:
           enabled: false
         kafka:
           enabled: false
+        web:
+          ingress:
+            enabled: true
+            hosts:
+              - temporalio.localtest.me
   destination:
     server: https://kubernetes.default.svc
     namespace: temporalio
